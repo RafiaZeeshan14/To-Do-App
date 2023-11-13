@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link  href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <style>
+      #todoList {
+        list-style-type:circle; /* or circle, square, etc. */
+      }
+    </style>
+  <title>To-Do App List</title>
+
+  </head>
+  
+  <body style="font-family: 'Montserrat', sans-serif; font-family: 'Poppins', sans-serif;">
+    <div class="md:flex h-screen ">
+      <!-- First Column -->
+      <div class="flex-1 flex items-center justify-center bg-cover h-screen bg-center" style="background-image: url('img2.jpg'); ">
+        <div>
+          <div class="flex rounded-lg shadow-sm">
+            <input id="todo"
+              type="text"
+              class="bg-yellow-50 py-3 px-4 block w-80 border focus:outline-none border-yellow-500 shadow-sm rounded-lg text-sm focus:z-10 focus:border-yellow-400 focus:ring-blue-50" placeholder="Enter your task..." />
+            <button id="btn" onclick="addList()"
+              type="button"
+              class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg ml-2 border border-transparent bg-yellow-100 text-yellow-500 hover:bg-yellow-200 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+            >
+              Add
+            </button>
+            <button id="btn" onclick="deleteAll()"
+            type="button"
+            class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg ml-2 border border-transparent bg-yellow-100 text-yellow-500 hover:bg-yellow-200 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+          >
+            Delete All
+          </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Column -->
+      <div class="flex-1 bg-yellow-100 text-black p-8">
+        <div class="flex  flex-col shadow-lg h-full bg-yellow-50">
+         <div class="flex flex-row justify-center">
+          <h1 class="font-semibold text-3xl mt-2 text-yellow-500 flex ">To-Do List<i class="fa-solid fa-clipboard-check ml-4"></i></h1>
+        </div>
+        <p class="text-xs flex flex-col items-center mt-2 text-yellow-600 mb-4">"Conquer the day: Today's to-do list is tomorrow's success story. <br>
+          &emsp;&emsp;&emsp;Let's make every task a step towards greatness!"</p>
+          <ul id="todoList" class="ml-6"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
+
