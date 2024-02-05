@@ -5,11 +5,10 @@ https://mytodo-app-01.netlify.app/
 
 ## Description
 The To-Do App project is a web-based application that allows users to create, manage, and organize their tasks. 
-It provides a user-friendly interface for adding new tasks, marking them as completed, and ... ... ... technologies:
+It provides a user-friendly interface for adding new tasks and ... ... ... technologies:
 - HTML
 - Tailwind CSS
 - JavaScript
-
 
 ## Installation
 To run this project locally, follow these steps:
